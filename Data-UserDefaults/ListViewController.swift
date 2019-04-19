@@ -14,7 +14,7 @@ class ListViewController: UITableViewController {
     @IBOutlet var gender: UISegmentedControl!   // 성별
     @IBOutlet var married: UISwitch!            // 결혼여부
     
-    // 제스처를 이용한 액션 메소드
+    // name 레이블에 제스처를 이용한 액션 메소드
     @IBAction func edit(_ sender: UITapGestureRecognizer) {
         
         let alert = UIAlertController(title: nil, message: "이름을 입력하세요", preferredStyle: .alert)
@@ -61,37 +61,6 @@ class ListViewController: UITableViewController {
         let plist = UserDefaults.standard
         plist.set(value, forKey: "married")
         plist.synchronize()
-    }
-    
-    // 테이블 셀을 클릭했을 때 호출되는 메소드
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        if indexPath.row == 0 {     // 이름 셀을 클릭했을 때
-//
-//            let alert = UIAlertController(title: nil, message: "이름을 입력해주세요", preferredStyle: .alert)
-//
-//            // 텍스트 필드 추가
-//            alert.addTextField {
-//                $0.text = self.name.text    // 해당 텍스트 필드에 이름을 표시
-//            }
-//
-//            alert.addAction(UIAlertAction(title: "OK", style: .default) { (_) in
-//
-//                let value = alert.textFields?[0].text
-//
-//                // 데이터를 저장
-//                let plist = UserDefaults.standard
-//                plist.set(value, forKey: "name")
-//                plist.synchronize()
-//
-//                // 화면에 표시
-//                self.name.text = value
-//            })
-//
-//            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-//
-//            self.present(alert, animated: false)
-//        }
     }
     
     override func viewDidLoad() {
