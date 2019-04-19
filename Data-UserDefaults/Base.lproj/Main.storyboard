@@ -34,12 +34,16 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="홍길동" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAE-Gk-4hX">
-                                                    <rect key="frame" x="314" y="12" width="45" height="21"/>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="홍길동" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAE-Gk-4hX">
+                                                    <rect key="frame" x="232" y="12" width="127" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="FzF-9p-6Vh" appends="YES" id="Ue0-36-Vz6"/>
+                                                    </connections>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -112,8 +116,13 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A3D-1t-oiY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FzF-9p-6Vh">
+                    <connections>
+                        <action selector="edit:" destination="kNn-P6-dlg" id="Lsl-vA-Fi1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="650" y="107"/>
+            <point key="canvasLocation" x="648.79999999999995" y="106.59670164917542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Rs-S3-ch4">
